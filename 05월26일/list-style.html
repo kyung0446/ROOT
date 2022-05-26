@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>목록 스타일</title>
+        <style>
+            div{
+                background-color: yellow;
+            }
+            ul {
+                /* list-style-image: url('../images/image-01.png'); */
+                list-style-type: none;
+                border: 5px solid red;
+                /*
+                border-style: solid;
+                border-color: red;
+                border-width: 5px;
+                */
+            }
+            ol {
+                /*
+                list-style-type: upper-alpha;
+                list-style-position: inside;
+                */
+                list-style: upper-alpha inside;
+                border: 3px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>회사</h1>
+        <hr />
+        <div>1</div>
+        <hr>
+        <div>
+            <ul>
+                <li>회사소개</li>
+                <li>자료실</li>
+                <li>질문답변</li>
+                <li>오시는길</li>
+            </ul>
+            <ol>
+                <li>회사소개</li>
+                <li>자료실</li>
+                <li>질문답변</li>
+                <li>오시는길</li>
+            </ol>
+        </div>
+    </body>
+</html>

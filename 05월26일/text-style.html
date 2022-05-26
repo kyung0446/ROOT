@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>텍스트 관련 스타일</title>
+        <style>
+            h1{
+               background-color: aqua;      
+               text-align: center;
+               width: 300px;
+               height: 300px;
+               line-height: 300px;
+               text-decoration: line-through;
+            }
+            span{
+                display: block;
+                background-color: purple;
+            }
+            p{
+                line-height: 3;
+                letter-spacing: 3px;
+            }
+            a{
+                text-decoration: none;
+            }
+            .ptag{
+                text-shadow: 0px 0px 2px #f00, ;
+            }
+            p:nth-of-type(3){
+                color: red;
+                text-transform: lowercase;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>제목입니다</h1>
+        <hr>
+        <span>문장을 입력합니다-1</span>
+        <span>문장을 입력합니다-2</span>
+        <hr>
+        <a href="#">링크</a>
+        <p class="ptag">P태그 문장입니다-1</p>
+        <p>P태그 문장입니다-2</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi rem explicabo, harum impedit consectetur dicta ad nisi aliquam cumque praesentium id! Explicabo blanditiis consequatur dolorum impedit minus. Quos, quae veritatis?</p>
+    </body>
+</html>
