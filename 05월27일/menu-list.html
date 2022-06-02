@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>MENU LIST</title>
+        <style>
+            ul{
+                list-style: none;
+                font-size: 0;
+            }
+            li{
+                display: inline-block;
+                border: 1px solid #f00;
+                font-size: 16px;
+                background-color: yellow;
+                padding: 10px 20px;
+            }
+            li:hover{
+                /* cursor: pointer; */
+                background-color: #0f0;
+            }
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+            nav{
+                height: 500px;
+                padding: 20px;
+                /* background-color: aquamarine;
+                background-clip: padding-box; */
+                border: 2px dashed #f00;
+                background-image: url('../images/image-01.png');
+                /* background-size: contain; */
+                /* background-size: cover; */
+                /* background-size: 300px 300px; */
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">MENU-1</a></li>
+                    <li><a href="#">MENU-2</a></li>
+                    <li><a href="#">MENU-3</a></li>
+                    <li><a href="#">MENU-4</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
