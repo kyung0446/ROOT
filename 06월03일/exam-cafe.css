@@ -1,0 +1,87 @@
+@charset 'utf-8';
+
+/* reset.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    text-align: center;
+}
+ul > li {
+    display: inline-block;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* layout */
+#container{
+    width: 960px;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/cafe-1.jpg');
+    background-size: cover;
+}
+nav{
+    background-color: #222;
+}
+
+/* main  */
+.clear{
+    clear: both;
+}
+main > section{
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid #eee;
+}
+/*
+odd 홀수
+even 짝수
+*/
+main > section:nth-of-type(2n){
+    background-color: #eee;
+}
+main > section > div{
+    width: 40%;
+    height: 300px;
+    margin: 30px;    
+}
+main > section > div{
+    float: left;
+}
+main > section > .image > img {
+    width: 100%;
+    height: 100%;    
+}
+main > section > .detail > p{
+    margin: 15px 5px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+main > section > .detail > .i{
+    font-style: italic;
+    font-size: 12px;
+}
+main > section:nth-of-type(3) > .image > img{
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px 5px #222;
+}
+main > section > div h2{
+    margin: 10px 0;
+}
+footer{
+    background-color: #222;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
