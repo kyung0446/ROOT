@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>회전</title>
+        <style>
+            main {
+                width: 300px;
+                margin: 50px auto;
+            }
+            div {
+                width: 200px;
+                height: 200px;
+            }
+            img {
+                width: 100%;
+            }
+            .box1:hover{     
+                transform: rotateX(30deg);          
+            }
+            .box2:hover{
+                transform: rotateY(30deg);
+            }
+            .box3{
+                transition-duration: 0.8s;
+            }
+            .box3:hover{
+                transform: rotate(-30deg);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="box1">
+                <img src="../images/image-01.png" alt="" />
+            </div>
+            <div class="box2">
+                <img src="../images/image-02.png" alt="" />
+            </div>
+            <div class="box3">
+                <img src="../images/image-03.png" alt="" />
+            </div>
+        </main>
+    </body>
+</html>

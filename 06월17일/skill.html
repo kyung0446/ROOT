@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>프로그래스바</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                line-height: 2.5em;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .progress{
+                width: 500px;
+                background-color: #333;
+                border-radius: 10px;
+                color: #fff;
+                padding: 20px;
+            }
+            .progress h1{
+                text-align: center;
+            }
+
+            .item p span:first-child{
+                float: left;
+            }
+            .item p span:last-child{
+                float: right;
+            }
+            .item p::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .item .line{
+                border: 1px solid greenyellow;
+                border-radius: 3px; 
+                padding: 5px;               
+            }
+            .item .level{
+                height: 10px;
+                background-color: yellow;
+                /* width: 100%; */
+                animation-name: move;
+                animation-duration: 1s;
+            } 
+            /* .item:nth-of-type(1) .level{ width: 90%;}           
+            .item:nth-of-type(2) .level{ width: 80%;}           
+            .item:nth-of-type(3) .level{ width: 65%;}           
+            .item:nth-of-type(4) .level{ width: 70%;}           
+            .item:nth-of-type(5) .level{ width: 82%;}   */
+
+            @keyframes move {
+                0%{
+                    width: 0;
+                }
+            }      
+        </style>
+    </head>
+    <body>
+        <div class="progress">
+            <h1>SOFTWARE SKILLS</h1>
+            <div class="item">
+                <p>
+                    <span>HTML5</span>
+                    <span>90%</span>
+                </p>
+                <div class="line">
+                    <div class="level" style="width:90%"></div>
+                </div>
+            </div>
+            <div class="item">
+                <p>
+                    <span>CSS3</span>
+                    <span>80%</span>
+                </p>
+                <div class="line">
+                    <div class="level"  style="width:80%"></div>
+                </div>
+            </div>
+            <div class="item">
+                <p>
+                    <span>jQuery</span>
+                    <span>65%</span>
+                </p>
+                <div class="line">
+                    <div class="level"  style="width:65%"></div>
+                </div>
+            </div>
+            <div class="item">
+                <p>
+                    <span>Photoshop</span>
+                    <span>70%</span>
+                </p>
+                <div class="line">
+                    <div class="level"  style="width:70%"></div>
+                </div>
+            </div>
+            <div class="item">
+                <p>
+                    <span>Illustrator</span>
+                    <span>82%</span>
+                </p>
+                <div class="line">
+                    <div class="level"  style="width:82%"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

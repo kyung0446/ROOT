@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>속성 선택자</title>
+        <style>
+            ul{
+                list-style: none;
+            }
+            ul > li{
+                display: inline-block;
+                margin: 10px 20px;
+            }
+            a{
+                text-decoration: none;
+                color: #222;
+            }
+            a[href]{
+                background-color: yellow;
+                border: 1px solid #ccc;
+            }
+            a[href="#2"]{
+                color: #f00;
+            }
+            a[class|=btn]{
+                border: 1px dotted #f00;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="btn">전체</li>
+            <li><a class="btn">메인메뉴 : </a></li>
+            <li><a href="#1">메뉴 1</a></li>
+            <li><a href="#2">메뉴 2</a></li>
+            <li><a href="#3" class="btn">메뉴 3</a></li>
+            <li><a href="#4" class="btn-chk">메뉴 4</a></li>
+        </ul>
+    </body>
+</html>

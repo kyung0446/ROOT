@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>폼 예제</title>
+        <style>
+            #wrapper{
+                width: 50%;
+                /* margin: 0 auto; */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .box, .grade{
+                text-align: center;
+            }
+            .box > input:checked + label{
+                color: crimson;
+            }
+            .grade > label > input:checked + span{
+                color: crimson;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="box">
+                <input type="checkbox" id="check"/>
+                <label for="check"
+                    >약관을 충분히 이해하였으면 동의 합니다.</label>
+            </div>
+            <hr />
+            <div class="grade">
+                <label><input type="radio" name="grade"/><span>초등학생</span></label>
+                <label><input type="radio" name="grade" /><span>중학생</span></label>
+                <label><input type="radio" name="grade" /><span>고등학생</span></label>
+                <label><input type="radio" name="grade" /><span>대학생</span></label>               
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>SNS 애니메이션</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"/>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                height: 50vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            a{
+                text-decoration: none;
+                color: #222;
+            }
+            .sns a{
+                box-sizing: border-box;
+                font-size: 40px;
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                /* border: 3px solid #fff; */
+                text-align: center;
+                line-height: 80px;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 0 4px #222;
+            }
+            .sns a::before{
+                content: '';
+                /* display: inline-block; */
+                width: 0%;
+                height: 100%;                
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: all 1s linear;
+            }
+            .sns a:nth-child(1)::before{
+                background-color: blue;
+            }
+            .sns a:nth-child(2)::before{
+                background-color: green;
+            }
+            .sns a:nth-child(3)::before{
+                background-color: red;
+            }
+            .sns a:hover::before{
+                width: 100%;                
+            }
+            .sns a:hover .fa-brands{
+                color: #fff;
+                transform: rotateY(360deg);
+            }
+            .sns .fa-brands{
+                position: relative;
+                transition: 0.5s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="sns">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+        </div>
+    </body>
+</html>

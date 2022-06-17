@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>3D효과</title>
+        <style>
+            main {
+                width: 300px;
+                margin: 50px auto;
+                perspective: 500px;  /* 700~900*/
+            }
+            div {
+                width: 200px;
+                height: 200px;
+                margin: 20px;
+                border: 3px solid blue;
+            }
+            img {
+                width: 100%;
+            }
+            .box1:hover{
+                transform: rotateX(30deg);
+            }
+            .box2:hover{
+                transform: rotateY(140deg);
+                backface-visibility: hidden;
+            }
+            .box3:hover{
+                transform-origin: right bottom;
+                transform: rotateZ(30deg);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="box1">
+                <img src="../images/image-01.png" alt="" />
+            </div>
+            <div class="box2">
+                <img src="../images/image-02.png" alt="" />
+            </div>
+            <div class="box3">
+                <img src="../images/image-03.png" alt="" />
+            </div>
+        </main>
+    </body>
+</html>

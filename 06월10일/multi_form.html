@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>기타 태그</title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label>메모 : </label>
+                <textarea cols="50" rows="4"></textarea>
+            </div>
+            <div>
+                <select name="opt">
+                    <optgroup label="그룹명">
+                        <option value="option1">내용1</option>
+                        <option value="option2">내용2</option>
+                        <option value="option3">내용3</option>
+                    </optgroup>
+                    <option value="option4">내용4</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" list="list">
+                <datalist id="list">
+                    <optgroup label="그룹명">
+                        <option value="option1">내용1</option>
+                        <option value="option2">내용2</option>
+                        <option value="option3">내용3</option>
+                    </optgroup>
+                    <option value="option4">내용4</option>
+                </datalist>
+            </div>
+            <div>
+                <progress max="60" value="40"></progress>
+                <meter max="60" value="40"></meter>
+            </div>
+            <input type="submit" value="전송" />
+        </form>
+    </body>
+</html>
