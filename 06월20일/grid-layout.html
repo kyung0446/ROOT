@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>그리드 레이아웃</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #wrapper{                
+                width: 90%;
+                height: 100vh;
+                margin: 0 auto;       
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: 50px 1fr 1fr 100px;
+                grid-template-areas:    "header header header header"
+                                        "sec1 sec1 sec2 sec3"
+                                        "sec4 sec5 sec6 sec7"
+                                        "footer footer footer footer";        
+            }
+            .head{ 
+                background-color: tomato;
+                grid-area: header;
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .head h1{
+                background-color: tomato;
+                height: 100px;
+                width: 10%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .head nav{
+                width: 90%;
+                background-color: tomato;
+            }
+            .sec1{ 
+                background-color: darkcyan;
+                grid-area: sec1;
+            }
+            .sec2{ 
+                background-color: gold;
+                grid-area: sec2;
+            }
+            .sec3{ 
+                background-color: green;
+                grid-area: sec3;
+            }
+            .sec4{ 
+                background-color: darkseagreen;
+                grid-area: sec4;
+            }
+            .sec5{ 
+                background-color: orange;
+                grid-area: sec5;
+            }
+            .sec6{ 
+                background-color: lightblue;
+                grid-area: sec6;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+            .sec6 div{
+                flex: 1;
+            }
+            .sec6_1{ background-color: darkblue;}
+            .sec6_2{ background-color: blue;}
+            .sec7{ 
+                background-color: palevioletred;
+                grid-area: sec7;
+            }
+            .footer{ 
+                background-color:#aaa;
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="head">
+                <h1>LOGO</h1>
+                <nav>MENU</nav>
+            </header>
+            <section class="sec1">1</section>
+            <section class="sec2">2</section>
+            <section class="sec3">3</section>
+            <section class="sec4">4</section>
+            <section class="sec5">5</section>
+            <section class="sec6">
+                <div class="sec6_1">6-1</div>
+                <div class="sec6_2">6-2</div>
+            </section>
+            <section class="sec7">7</section>
+            <footer class="footer">footer</footer>
+        </div>
+    </body>
+</html>

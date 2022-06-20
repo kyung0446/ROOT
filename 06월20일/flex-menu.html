@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>플랙서블 메뉴</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            nav{
+                background-color: #000;
+            }
+            a{
+                display: block;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #fff;text-align: center;
+            }
+            a:hover{
+                background-color: aquamarine;
+                border-radius: 10px 10px 0 0;
+            }
+            ul{
+                list-style: none;
+                padding-top: 20px;
+                display: flex;
+                /* justify-content: center; */
+            }
+            ul li{
+                /* flex: 1 1 0; */
+            }
+            /* li:nth-child(1){
+                margin-right: auto;
+            } */
+            li:nth-child(5){
+                margin-left: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">회사개요</a></li>
+                <li><a href="#">업무내용</a></li>
+                <li><a href="#">접속하기</a></li>
+                <li><a href="#">문의하기</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
