@@ -1,0 +1,53 @@
+@charset 'utf-8';
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[name=tab]{
+    display: none;
+}
+.slide{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.images{
+    width: 900px;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+input[id=tab1]:checked ~ .slide .images{
+    left: 0;
+}
+input[id=tab2]:checked ~ .slide .images{
+    left: -300px;
+}
+input[id=tab3]:checked ~ .slide .images{
+    left: -600px;
+}
+.images img{
+    width: 300px;
+}
+.btn{
+    text-align: center;
+    margin: 10px;
+}
+.btn label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lightgray;
+    cursor: pointer;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+    background-color: tomato;
+}
