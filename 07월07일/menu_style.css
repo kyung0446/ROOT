@@ -134,3 +134,62 @@ a{
 .menu5:hover:after{
     width: 0;
 }
+
+/*********************************************/
+.menu6{
+    position: relative;
+    height: 53px;
+    overflow: hidden;
+}
+.menu6 > span{
+    color: #fff;
+    position: absolute;
+    transition: 0.5s;
+}
+.menu6 > span:first-child{
+    background-color: tomato;
+    top: 0;
+}
+.menu6 > span:last-child{
+    background-color: blue;
+    top: 100%;
+}
+.menu6:hover span:first-child{
+    top: -100%;
+}
+.menu6:hover span:last-child{
+    top: 0;
+}
+/*********************************************/
+.menu7{
+    position: relative;
+    width: 300px;
+    height: 53px;
+    overflow: hidden;
+    /* border: 2px solid orange; */
+}
+.menu7::before,
+.menu7::after{
+    content: attr(menu-text);
+    color: #fff;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 53px;
+    transition: 0.5s;
+}
+.menu7::before{
+    background-color: tomato;
+    top: 0;
+}
+.menu7::after{
+    background-color: blue;
+    top: 100%;
+}
+.menu7:hover::before{
+    top: -100%;
+}
+.menu7:hover:after{
+    top: 0;
+}
