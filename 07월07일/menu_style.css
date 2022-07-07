@@ -1,0 +1,136 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+a{
+    text-decoration: none;
+    color: #222;
+    /* menu style */
+    font-size: 40px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+/*********************************************/
+/* .menu1::after{
+    content: '';
+    background-color: tomato;
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: 0.5s;
+}
+.menu1:hover::after{
+    width: 100%;
+} */
+.menu1{
+    position: relative;
+}
+.menu1::after{
+    content: '';
+    background-color: tomato;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: 0.5s;
+}
+.menu1:hover::after{
+    width: 100%;
+}
+
+/*********************************************/
+.menu2{
+    position: relative;
+}
+.menu2::after{
+    content: '';
+    background-color: tomato;
+    /* display: block; */
+    width: 0;
+    height: 2px;
+    transition: 0.5s;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+.menu2:hover:after{
+    width: 100%;
+}
+
+/*********************************************/
+.menu3{
+    position: relative;
+}
+.menu3::after{
+    content: '';
+    background-color: tomato;
+    /* display: block; */
+    width: 5px;
+    height: 5px;
+    transition: 0.5s;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    /* right: 0; */
+}
+.menu3:hover:after{
+    left: 100%;
+    /* right: 100%; */
+}
+
+/*********************************************/
+.menu4{
+    position: relative;
+}
+.menu4::after{
+    content: '';
+    background-color: tomato;
+    /* display: block; */
+    transition: 0.5s;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    /* right: 0; */
+    /* transform: translateX(-50%); */
+}
+.menu4:hover:after{
+    left: 0;
+    width: 100%;
+}
+
+/*********************************************/
+.menu5{
+    position: relative;
+}
+.menu5::after{
+    content: '';
+    background-color: tomato;
+    /* display: block; */
+    transition: 0.5s;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    /* right: 0; */
+    transform: translateX(-50%);
+}
+.menu5:hover:after{
+    width: 0;
+}
