@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/*** common ************************/
+*{
+    margin: 0; 
+    padding: 0;
+    color: #333333;
+} 
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+/*** popup ************************/
+#popBox{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 200px auto;
+    width: 500px;
+    height: 100px;
+    background-color: #fff;
+    z-index: 10;
+    padding: 20px;
+    border: 1px solid #888;
+}
+#popBox p{
+    margin: 10px;
+}
+#popBox a{
+    text-align: right;
+}
+/*** wrapper ************************/
+#wrapper{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+/*** header ************************/
+header{
+    width: 20%;
+    background-color: rgb(255, 246, 230);
+}
+header .logo{
+    height: 40px;
+    margin: 30px auto;
+}
+nav > ul{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+nav ul > li.main-menu > a{
+    border: 1px solid #888;
+    padding: 10px 0;
+}
+nav ul > li.main-menu > a:hover{
+    background-color: brown;
+    color: #fff;
+}
+.main-menu{
+    position: relative;
+}
+.sub-menu{
+    /* display: none; */
+    position: absolute;
+    top: -30px;
+    left: 100%;
+    z-index: 20;
+    width: 100%;
+    background-color: #fff;
+}
+.sub-menu a{
+    padding: 5px 0;
+}
+.sub-menu > li:hover a{
+    background-color: coral;
+}
+
+/************************************/
+main{
+    width: 80%;
+    background-color: wheat;
+}
+
+/*** slide ************************/
+.slide{
+    height: 350px;
+}
+.slide-list{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide-list li{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide-list p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contents{
+    height: 200px;
+    display: flex;
+}
+/*** tab ************************/
+.tab{
+    width: 40%;
+}
+.tab-menu{
+    height: 44px;
+}
+.tab-menu li{
+    display: inline-block;
+}
+.tab-menu li a{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.tab-menu li.on a{
+    background-color: brown;
+    color: #fff;
+}
+.tab-item{
+    height: 156px;
+}
+.tab-item ul.on{
+    background-color: coral;
+}
+.notice{
+    height: 100%;
+}
+.notice li{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.notice li a{
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery{
+    display: none;
+    height: 100%;
+}
+.gallery li{    
+    display: inline-block;
+    text-align: center;
+    width: 32%;
+    margin-top: 20px;
+}
+
+/*** banner, link ************************/
+.banner, .link{
+    width: 30%;
+    position: relative;
+}
+.banner>p, .link>p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/*** footer ************************/
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.f-logo{
+    width: 25%;
+    height: 40px;
+}
+.f-menu{
+    width: 75%;
+}
+.f-menu > ul{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.f-menu > p{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
