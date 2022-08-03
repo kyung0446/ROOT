@@ -49,11 +49,14 @@ $(
             $(this).addClass('on');
         });
 
-        //popup
-        $('.notice li:nth-child(1)').click(
-            function(){
-                $('.popupBox').show();
-            }
-        );
+        //popBox
+        $('.notice li:first-child').click(function(){
+            // $('.popBox').show();
+            $('.popBox').fadeIn('fast');
+        });
+        $('.popBox a').click(function(){
+            // $('.popBox').hide();
+            $('.popBox').fadeOut('fast');
+        });
     }
 );
