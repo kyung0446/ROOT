@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/*** common ************************/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: '맑은 고딕', sans-serif;
+    box-sizing: border-box;
+    color: #333333;
+}
+ul{
+    list-style: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+
+#wrapper{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+#modal{
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: #fff;
+    z-index: 11;    
+    border: 1px solid #333;
+    width: 500px;
+    padding: 10px;
+}
+#modal > *{
+    padding: 10px;
+}
+#modal a{
+    text-align: right;
+}
+/*** header ************************/
+header{
+    width: 20%;
+    background-color: aquamarine;
+}
+.logo{
+    height: 40px;
+    margin: 20px auto;
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+}
+.main-menu > a{
+    border: 1px solid #333;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.main-menu{
+    position: relative;
+}
+.main-menu:hover > a{
+    background-color: chartreuse;
+}
+.sub-menu{
+    display: none;
+    background-color: chartreuse;
+    width: 100%;
+    position: absolute;
+    top: -30px;
+    left: 100%;
+    z-index: 10;
+}
+.sub-menu li > a{
+    padding: 5px;
+}
+.sub-menu li:hover > a{
+    background-color: #fff;
+}
+
+/*** main ************************/
+main{
+    width: 80%;
+}
+.slide{
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.slide-list{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.contents{
+    height: 200px;
+    display: flex;
+}
+.notice{
+    width: 250px;
+    padding: 10px;
+}
+.notice li{
+    display: flex;
+    padding: 5px 0;
+}
+.notice li a{
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gallery{
+    width: 300px;
+    padding: 10px;
+}
+.gallery-list{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner{
+    width: 250px;
+}
+/*** footer ************************/
+footer{
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.f-logo{
+    width: 30%;
+    height: 40px;
+}
+.f-item{
+    width: 70%;
+    height: 100%;
+}
+.f-item > *{
+    height: 50%;
+}
+.f-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-menu li{
+    padding: 5px 10px;
+}
+.f-text{
+    font-size: 18px;
+    line-height: 50px;
+}
