@@ -107,32 +107,39 @@ nav > ul{
 .on{
     background-color: cadetblue;
 }
-.tab-menu{
+.tab > .tab-menu{
+    height: 40px;
     display: flex;
 }
-.tab-menu > h3 > a{
-    padding: 15px;
+.tab > .tab-menu > *{
+    height: 100%;
 }
-.notice{
-    padding: 10px;    
+.tab > .tab-menu a{
+    padding: 10px;
+    font-size: 18px;
 }
-.notice > li{
+.tab > .tab-item{
+    height: 160px;
+}
+.tab > .tab-item > *{
+    height: 100%;
+}
+.notice > li {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 5px 0;
 }
 .notice > li > a{
-    width: 70%;    
+    width: 70%;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;    
 }
 .notice > li > p{
     padding-left: auto;
 }
 .gallery{
-    height: 145px;
-    display: flex;    
+    display: flex;
     justify-content: space-around;
     align-items: center;
 }

@@ -12,8 +12,8 @@ $(function(){
 
     //tab menu
     $('.tab-item > .gallery').hide();
-    $('.tab-menu > h3').click(function(){
-        $('.tab-menu > h3').removeClass('on');
+    $('.tab-menu > li').click(function(){
+        $('.tab-menu > li').removeClass('on');
         $(this).addClass('on');
 
         let idx = $(this).index();
