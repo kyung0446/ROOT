@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Summary</title>
+        <style>
+            details summary{
+                cursor: pointer;
+                background-color: #222;
+                color: #fff;
+            }
+            details summary::marker{
+                font-size: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <details open>
+            <summary>공지사항</summary>
+            <div>사내 공지사항을 입력합니다.</div>
+        </details>
+        <details>
+            <summary>작업순서</summary>
+            <ol>
+                <li>작업순서 1번입니다.</li>
+                <li>작업순서 2번입니다.</li>
+                <li>작업순서 3번입니다.</li>
+            </ol>
+        </details>
+    </body>
+</html>

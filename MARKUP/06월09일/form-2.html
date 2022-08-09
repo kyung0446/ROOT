@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>input태그</title>
+        <style>
+            input::-webkit-input-placeholder {
+                color: blue;
+                font-style: italic;
+                opacity: 0.3;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label>
+                아이디 :
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="가나다라"
+                    size="3"
+                />
+            </label>
+            <label>
+                비밀번호 :
+                <input type="password" />
+            </label>
+            <label>
+                이메일 :
+                <input type="email" />
+            </label>
+            <input type="submit" value="전송" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+@charset 'utf-8';
+
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.video_frame video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+.video_frame::before {
+    content: "";
+    background-image: linear-gradient(-135deg, crimson, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    position: absolute;
+    width: 600px;
+    left: 100px;
+    bottom: 100px;
+    color: #fff;
+    animation: move_wrapper;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    /* animation-fill-mode: both; */
+}
+.wrapper h1 {
+    font-size: 50px;
+}
+.wrapper h1:first-child {
+    color: crimson;
+}
+.wrapper p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.wrapper a {
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    padding: 7px 10px;
+}
+.wrapper .text-book {
+    background-color: #fff;
+    color: #222;
+}
+.text-book:hover {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+.text-learn:hover {
+    background-color: #fff;
+    color: #222;
+}
+.anniversary {
+    box-sizing: border-box;
+    position: absolute;
+    right: 100px;
+    bottom: 60px;
+    color: #222;
+    text-align: center;
+    animation: move_anniversary;
+    /* animation-delay: 1s; */
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    /* animation-fill-mode: both; */
+}
+.anniversary p:first-child {
+    font-size: 30px;
+    font-weight: bolder;
+}
+.anniversary p:last-child {
+    font-family: "Monoton", cursive;
+    font-size: 100px;
+}
+
+@keyframes move_wrapper {
+    0% {
+        opacity: 0;
+        margin-left: -150px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+@keyframes move_anniversary {
+    0% {
+        opacity: 0;
+        margin-right: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0px;
+    }
+}

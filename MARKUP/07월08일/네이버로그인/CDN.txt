@@ -1,0 +1,20 @@
+네이버 밴드 로그인 화면 클론 코딩
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+font-family: 'Noto Sans KR', sans-serif;
+
+휴대폰 번호로 로그인
+#888888
+이메일로 로그인
+#8A8C9B
+네이버로 로그인
+#03C75A
+페이스북으로 로그인
+#0075FF
+애플로 로그인
+#2B2B31
+나머지 글자색
+#777777
+
+버튼 사이즈
+250*50

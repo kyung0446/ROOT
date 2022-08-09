@@ -1,0 +1,113 @@
+@charset 'utf-8';
+
+/* reset.css */
+*{ margin: 0; padding: 0;}
+a{ text-decoration: none; color: #000;}
+ul{ list-style: none;}
+img{ width: 100px;}
+
+/* header stylesheet */
+header{
+    background-color: #000;
+    color: #fff;
+}
+header .logo{
+    font-size: 2rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+} 
+header .gnb{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header .gnb li{
+    width: 20%;
+}
+header .gnb a{
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+header .gnb a::after{
+    content: "";
+    display: block;
+    width:50%;
+    height: 5px;
+    background-color: aquamarine;
+    transition: 0.5s;
+}
+header .gnb a:hover{
+    color: aquamarine;
+}
+header .gnb a:hover:after{
+    width:100%;
+}
+/*******************************/
+
+/*  about stylesheet   */
+.about{
+    margin: 10px;
+}
+.about h1{
+    color: aquamarine;
+    padding: 10px 0;
+}
+.about ul>li{
+    padding: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+.about ul>li:first-child{
+    border-top: 1px dashed #ddd;
+}
+.about ul>li>a:hover{
+    color:aquamarine;
+}
+/*******************************/
+
+/* notice stylesheet */
+.notice{
+    margin: 30px 10px;
+    width: 100%;
+}
+.notice h2{
+    font-size: 18px;
+}
+.notice ul{
+    width: 95%;
+    margin-top: 10px;
+}
+.notice ul>li{
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.notice ul>li>p{
+    margin-left: 10px;
+}
+/*******************************/
+
+/* footer stylesheet */
+footer{
+    background-color: #000;
+    color: #fff;
+}
+footer p{
+    padding: 25px;
+}
+
+/* M - 768px 이상 */
+@media screen and (min-width:768px){
+    main{
+        display: flex;
+    }
+    .about{
+        /* width: 30%; */
+        width: 300px;
+    }
+}
+
+

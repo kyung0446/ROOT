@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>switch case 문 활용</title>
+        <style>
+            body{
+                background-color: darkblue;
+                color: #eee;
+                text-align: center;
+            }
+            div{
+                margin-top: 100px;
+                font-size: 2rem;
+                font-weight: bolder;
+                text-shadow: 1px 2px 1px #000;
+            }
+            div strong{
+                font-size: 4rem;
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            let session = prompt("관심섹션을 입력하세요. 1-마케팅, 2-개발, 3-디자인");
+            let txtContents = null;
+            //session : 1,2,3, ~~~~~
+            switch(session){
+                case '1' :
+                    txtContents = "<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.</p>";
+                    break;
+                case '2' :
+                    txtContents = "<p>개발 세션은 <strong>202호</strong>에서 진행됩니다.</p>";
+                    break;
+                case '3' :
+                    txtContents = "<p>디자인 세션은 <strong>203호</strong>에서 진행됩니다.</p>";
+                    break;
+                default :
+                    txtContents = "<p>잘못 입력했습니다</p>";
+                    break;
+            }
+            //객체를 가져오기
+            // const elemDiv = document.querySelector('div');
+            // elemDiv.innerHTML = txtContents;
+            document.querySelector('div').innerHTML = txtContents;
+        </script>
+    </body>
+</html>
