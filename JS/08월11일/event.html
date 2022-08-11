@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>이벤트 처리</title>
+    </head>
+    <body>
+        <button>덧셈 계산</button>
+        <!-- <button onclick="add()">덧셈 계산</button> -->
+        <!-- <button onclick="alert(10+20);">덧셈 계산</button> -->
+        <script>
+            let add = () => {
+                let sum = 30+30;
+                alert( sum );
+            }
+            const elemBtn = document.querySelector('button');
+            console.dir( elemBtn );
+            // elemBtn.onclick = add;
+            // elemBtn.onclick = () => {
+            //     let sum = 10+20;
+            //     alert( sum );
+            // };
+            // elemBtn.addEventListener('click', add );
+            elemBtn.addEventListener('click', (event) => {
+                // let sum = 30+30;
+                // alert( sum );
+                console.log( event );
+            } );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>이벤트 리스너</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .wrapper{
+                width: 500px;
+                height: auto;
+                position: relative;
+                margin: auto;
+            }
+            button{
+                background-color: #fff;
+                opacity: 0.7;
+                border: 1px solid #222;
+            }
+            img{
+                display: block;
+                width: 100%;
+                /* border: 2px solid red; */
+                /* outline: 2px solid red; */
+            }
+            .open{
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+            }
+            .detail{
+                display: none;
+                width: 90%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <img src="../../images/cafe-1.jpg">
+            <button class="open">상세 설명 보기</button>
+            <div class="detail">
+                <h1>민들레</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto excepturi in quas molestiae adipisci, eveniet quis. Iste dignissimos commodi, hic molestias harum qui unde? Asperiores obcaecati dolores accusamus quo cumque!</p>
+                <button class="close">상세 설명 닫기</button>
+            </div>
+        </div>
+        <script>
+            //1. 요소객체 가져오기
+            let elemOpen = document.querySelector('.open'); 
+            let elemClose = document.querySelector('.close');
+            let elemDetail = document.querySelector('.detail');
+            let elemImg = document.querySelector('img');
+
+            elemOpen.addEventListener('click',() => {
+                elemDetail.style.display = 'block';
+                elemOpen.style.display = 'none';
+            });    
+            elemClose.addEventListener('click',()=>{
+                elemDetail.style.display = 'none';
+                elemOpen.style.display = 'block';
+            });
+
+            //2. 이벤트 등록
+            elemImg.addEventListener('mouseenter',()=>{
+                // elemImg.style.border = '2px solid red';
+                elemImg.style.outline = '2px solid red';
+            });
+            elemImg.addEventListener('mouseleave',()=>{
+                // elemImg.style.border = 'none';
+                elemImg.style.outline = '';
+            });
+
+        </script>
+    </body>
+</html>
