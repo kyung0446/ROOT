@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>배열 객체 활용</title>
+        <style>
+            *{ margin: 0; padding: 0;}
+            #wrapper{
+                width: 600px;
+                margin: 0 auto;
+            }
+            #wrapper>h1{
+                text-align: center;
+            }
+            #wrapper>form{
+                background-color: darkblue;
+                padding: 30px 40px;
+            }
+            #wrapper>form>input{
+                width: 400px;
+                padding: 10px;
+                border: none;
+            }
+            #wrapper>form>button{
+                padding: 10px;
+                width: 70px;
+                text-align: center;
+                border: none;
+            }
+            #wrapper> ul{
+                list-style: none;
+                padding: 10px 20px;
+            }
+            #wrapper > ul > li{
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>배열 리스트 목록</h1>
+            <form onsubmit="return false;">
+                <input type="text" id="item">
+                <button id="add">추가</button>
+            </form>
+            <ul id="itemList"></ul>
+        </div>
+        <script src="./checklist.js"></script>
+    </body>
+</html>

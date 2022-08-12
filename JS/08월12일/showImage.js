@@ -7,16 +7,13 @@
     const prevBtn = document.querySelector('.big-btn>button:first-child');
     const nextBtn = document.querySelector('.big-btn>button:last-child');
     const MAX = tagImg.length;
-    console.log( `max = ${MAX}`);
-    let currentIdx=0;
-    
-    
+    let currentIdx=0;  
 
-    /* 큰 이미지를 변경하는 함수 */
     const smallImgClick = function(){
         //클릭이 되면
         showBigImage(this);
     }
+    /* 큰 이미지를 변경하는 함수 */
     const showBigImage = function(obj){
         // console.log( this.getAttribute('src') );  //window
         let path = obj.getAttribute('src');
@@ -30,35 +27,41 @@
         }
         obj.style.outline = '2px solid blue';
     }
+    /* 초기화 정의 함수 */
+    const init = function(){
+        showBigImage(tagImg[currentIdx]);
+    }
 
-    /* 이벤트 등록 */
-    
+    /* 이벤트 등록 */    
     for( let elemImg of tagImg ) {
         elemImg.onclick = smallImgClick;
-    }
-    showImgBorder(tagImg[currentIdx]);
+    }    
     prevBtn.addEventListener('click',function(){
         // console.log( 'prevBtn click');
-        if( currentIdx <=0 ){
-            currentIdx = 0;
-        } else{
-            currentIdx--;
-        }
+        // if( currentIdx <=0 ){
+        //     currentIdx = 0;
+        // } else{
+        //     currentIdx--;
+        // }
+        currentIdx = (currentIdx<=0) ? 0 :--currentIdx;
         // let path = tagImg[currentIdx].getAttribute('src');
         // tagBig.setAttribute('src',path);
         showBigImage(tagImg[currentIdx]);
     });
     nextBtn.addEventListener('click',function(){
         // console.log( 'nextBtn click');
-        if( currentIdx < MAX-1 ) {
-            currentIdx++;
-        }else{
-            currentIdx = MAX-1;
-        }
+        // if( currentIdx < MAX-1 ) {
+        //     currentIdx++;
+        // }else{
+        //     currentIdx = MAX-1;
+        // }
+        currentIdx = (currentIdx<MAX-1)? ++currentIdx : MAX-1;
         // let path = tagImg[currentIdx].getAttribute('src');
         // tagBig.setAttribute('src',path);
         showBigImage(tagImg[currentIdx]);
     });
+    
+    init();
 })();
 
 
