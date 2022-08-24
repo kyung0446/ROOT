@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>요소의 크기 설정</title>
+        <style>
+            #box{
+                width: 30px;
+                height: 30px;
+                background-color: yellowgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+            const tagBox = document.querySelector('#box');
+            let rectInfo = tagBox.getBoundingClientRect();
+            console.log( rectInfo );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>키보드 이벤트</title>
+    </head>
+    <body>
+        <input type="text">
+        <div id="result"></div>
+        <script>
+            /*
+                keypress, keydown, keyup
+                keyboardEvent
+                alt, ctrl, shift, key(keycode)
+            */
+           const tagInput = document.querySelector('input[type=text]');
+           const tagResult = document.querySelector('#result');
+           const handlerKeyUp = (e) => {
+        //     if( e.key !== 'Enter' ) return;
+        //     console.log( 'key up event!' );
+        //     tagResult.textContent = e.target.value;
+        //     e.target.value = '';
+                if( e.key === 'a' ){
+                    tagResult.textContent = `${e.key} 누름`;
+                }
+           }
+           tagInput.addEventListener('keyup',handlerKeyUp);
+        </script>
+    </body>
+</html>

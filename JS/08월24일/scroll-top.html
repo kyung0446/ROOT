@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>스크롤 이동</title>
+        <style>
+            h1{
+                background-color: black;
+                color: white;
+                padding: 30px;
+            }
+            div{
+                background-color: lightgrey;
+                padding: 30px 30px 3000px;
+            }
+            #topBtn{
+                background-color: red;
+                color: white;
+                font-weight: bolder;
+                border: none;
+                outline: none;
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                z-index: 10;
+                padding: 20px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="topBtn">TOP</button>
+        <h1>Scroll Down</h1>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, corrupti! Nostrum, a obcaecati? Placeat minima velit commodi illum? Corporis consequatur repudiandae eligendi a porro culpa. Rem quae deserunt facere dolore.</div>
+        <script>
+            const tagBtn = document.querySelector('#topBtn');
+            const handlerScroll = ()=> {
+                // console.log( 'scroll event' );
+                // console.log( window.pageYOffset );
+                // console.log( window.innerHeight );  //100vh
+                if( window.pageYOffset > 80 ){
+                    tagBtn.style.display = 'block';
+                } else {
+                    tagBtn.style.display = 'none';
+                }
+            }
+            const handlerClick = () => {
+                // document.documentElement.scrollTop = 0;  
+                // scrollTo(0,0);
+                scroll({top:0, left:0, behavior:'smooth'});
+            }
+            const getScrollTop = () => {
+                if( window.pageYOffset !== undefined ){
+                    return window.pageYOffset;
+                } else{
+                    return document.documentElement.scrollTop || document.body.scrollTop;
+                }
+            }
+            window.addEventListener('scroll',handlerScroll);
+            tagBtn.addEventListener('click',handlerClick);
+        </script>
+    </body>
+</html>

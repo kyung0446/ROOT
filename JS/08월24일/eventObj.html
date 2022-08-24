@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>마우스 좌표</title>
+        <style>
+            #box{
+                margin-top: 800px;
+                background-color: green;
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <div id="result"></div>
+        <script>
+            const tagBox = document.querySelector('#box');
+            const tagResult = document.querySelector('#result');
+            const handlerClick = (event) => {
+                tagResult.innerHTML = `<div>screen X,Y = ( ${event.screenX},${event.screenY} )</div>`;
+                tagResult.innerHTML += `<div>client X,Y = ( ${event.clientX},${event.clientY} )</div>`;
+                tagResult.innerHTML += `<div>page X,Y = ( ${event.pageX},${event.pageY} )</div>`;
+                tagResult.innerHTML += `<div>offset X,Y = ( ${event.offsetX},${event.offsetY} )</div>`;
+            }
+            tagBox.addEventListener('click',handlerClick);
+        </script>
+    </body>    
+</html>
