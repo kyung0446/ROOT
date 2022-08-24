@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>이벤트 핸들러</title>
+    </head>
+    <body>
+        <div id="outer">
+            outer
+            <div id="inner1">inner1</div>
+            <div id="inner2">inner2</div>
+        </div>
+        <script>
+            let tagOuter = document.querySelector('#outer');
+            let tagInner2 = document.querySelector('#inner2');
+            tagOuter.addEventListener( 'click',(e) => {
+                console.log( 'outer bubbling');
+            },false);  
+            /*
+                false : 타깃 상태와 버블링 단계만 실행
+            */
+            tagOuter.addEventListener('click',(e)=>{
+                console.log( 'outer capturing');
+            },true);
+            tagInner2.addEventListener('click',(e)=>{
+                console.log( 'inner2-1' );
+                //이벤트의 전파를 취소합니다.
+                e.stopPropagation();  
+            },false);
+            tagInner2.addEventListener('click',(e)=>{
+                console.log( 'inner2-2' );
+            },false);
+            
+        </script>
+    </body>
+</html>

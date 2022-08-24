@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>이벤트 핸들러</title>
+    </head>
+    <body>
+        <button class="add">Click Me!</button>
+        <button class="remove">이벤트 삭제</button>
+        <script>
+            const tagAdd = document.querySelector('.add');
+            const tagRemove = document.querySelector('.remove');
+
+            const handlerClick = (event) => {
+                console.log( event );
+            }
+            const handlerClick2 = (event) => {
+                console.log( 'click' );
+            }
+            const handlerRemove = () => {
+                // tagAdd.removeEventListener('click',handlerRemove );
+                tagAdd.onclick = null;
+            }
+
+            tagAdd.onclick = handlerClick;
+            tagAdd.onclick = handlerClick2;
+
+            // tagAdd.addEventListener( 'click', handlerClick );
+            // tagAdd.addEventListener( 'click', handlerClick2 );
+
+            tagRemove.addEventListener('click',function click2(){
+                console.log('click2');
+            });
+            
+        </script>
+    </body>
+</html>
