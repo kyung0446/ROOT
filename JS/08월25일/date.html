@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>기념일 출력</title>
+        <style>
+            *{margin: 0; padding: 0; box-sizing: border-box;}
+            #wrapper{
+                width: 500px;
+                margin: 30px auto;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 2px 2px 7px #222;
+                text-align: center;
+                font-weight: bolder;
+            }
+            #wrapper > .day1{
+                margin: 30px;                
+            }
+            #wrapper > .day1 > .pass{
+                margin: 20px;
+                font-size: 3rem;
+            }
+            #wrapper > .bar{
+                background-color: #222;
+                height: 50px;
+                color: #fff;
+                line-height: 50px;
+                text-align: left;
+                padding-left: 30px;
+            }
+            .day2 > div{
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+                margin: 20px auto;
+                font-size: 2rem;
+            }        
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="day1">
+                <p>프론트엔드 개발자 과정</p>
+                <p class="pass">몇일</p>
+            </div>
+            <div class="bar">기념일 계산</div>
+            <div class="day2">
+                <!-- <div>
+                    <p>100일</p>
+                    <p>몇월 몇일</p>
+                </div> -->
+            </div>
+        </div>
+        <script src="date.js"></script>
+    </body>
+</html>
