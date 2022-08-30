@@ -18,8 +18,8 @@
 }
 .slide-list{
     display: flex;
-    transition: 300ms;
-    transform: translateX(0px);
+    /*transition: 300ms;*/ /*0ms*/
+    transform: translateX(-300px);
 }
 .slide-list > img{
     display: block;
