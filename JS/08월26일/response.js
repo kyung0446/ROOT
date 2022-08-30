@@ -2,7 +2,13 @@
 const tagColor = document.querySelector('#color');
 const tagResult = document.querySelector('#result');
 let timeoutID;
-let time = { start:0, end:0, };
+let time = { 
+                start:0, 
+                end:0,
+                getTimeDiff : function(){ 
+                    return this.end - this.start;
+                } 
+            };
 let records = [];
 
 const changeColorContent = (old,current,text) => {
@@ -50,8 +56,9 @@ const handlerColorClick = () => {
     } else if( tagColor.classList.contains('now') ){
         clearTimeout(timeoutID);
         time.end = new Date();
-        const currentTime = time.end - time.start;
-        rankRecords( currentTime );
+        // const currentTime = time.end - time.start;
+        // rankRecords( currentTime );
+        rankRecords( time.getTimeDiff() );
         changeColorContent('now','waiting','클릭해서 시작하세요');
     }
 }

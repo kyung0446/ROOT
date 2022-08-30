@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;    
+}
+#wrapper{
+    width: 600px;
+    margin: 50px auto;
+    position: relative;
+}
+.slide{
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+.slide-list{
+    display: flex;
+    transition: 300ms;
+    transform: translateX(0px);
+}
+.slide-list > img{
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.slide-btn > button{
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+.slide-btn > .prev{
+    left: 50px;
+}
+.slide-btn > .next {
+    right: 50px;
+}
+.circle{
+    margin: 30px;
+}
+.circle > .dot{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 3px;
+    background-color: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.circle > .dot-active{
+    background-color: #222;
+}
