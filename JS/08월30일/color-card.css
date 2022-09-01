@@ -37,6 +37,6 @@ body{
     /* z-index: 1; */
     transform: rotateY(180deg);
 }
-body:hover .card{
+.card.open{
     transform: rotateY(180deg);
 }
