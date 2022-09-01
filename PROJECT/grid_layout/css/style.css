@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body{
+    height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+}
+.wrapper{
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+/****** image grid contents *******/
+main > section {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    background-color: #444;
+}
+main > section > p{
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.box1> p:nth-child(1){
+    grid-column: 1 / span 2;
+    font-size: 3rem;
+}
+section.box1> p:nth-child(2){
+    background: url(../images/m1.jpg) no-repeat right center;
+    background-size: cover;
+}
+section.box1> p:nth-child(4){
+    background-color: #666;
+}
+section.box1> p:nth-child(4){
+    background-color: #888;
+}
+section.box1> p:nth-child(5){
+    background: url(../images/m3.jpg) no-repeat left center;
+    background-color: #fff;
+    background-size: contain;
+}
+section.box1>p:nth-child(6){
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+    background: url(../images/m2.jpg) no-repeat center top;
+    background-size: cover;
+}
+section.box1>p:nth-child(7){
+    background: url(../images/m4.jpg) no-repeat center center;
+    background-size: cover;
+
+}
+section.box1>p:nth-child(10){
+    grid-column: 2 / span 2;
+    background: url(../images/m5.jpg) no-repeat right center;
+    background-size: cover;
+}
