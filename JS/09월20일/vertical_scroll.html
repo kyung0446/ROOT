@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="./reset.css" />
+        <link />
+        <title>가로 스크롤</title>
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+            #wrapper{                
+                display: flex;
+                width: 400%;
+                height: 100%;
+            }
+            section {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            section > p {
+                font-size: 3rem;
+            }
+            section.fixed{
+                position: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <section class="sec01" style="background-color: orange">
+                <p>Section 1</p>
+            </section>
+            <section class="sec02" style="background-color: green">
+                <p>Section 2</p>
+            </section>
+            <section class="sec03" style="background-color: blue">
+                <p>Section 3</p>
+            </section>
+            <section class="sec04" style="background-color: pink">
+                <p>Section 4</p>
+            </section>
+        </div>
+        <script>
+            const tagSection = document.querySelectorAll('section');
+            tagSection[0].classList.add('fixed');
+
+        </script>
+    </body>
+</html>

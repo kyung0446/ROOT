@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>스크롤 백분율 구하기</title>
+        <link rel="stylesheet" type="text/css" href="../reset.css" />        
+        <style>
+            h1{
+                text-align: center;
+                margin: 30px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 100px;
+            }
+            #scroll-bar{
+                width: 0;
+                height: 30px;
+                background-color: blue;   
+                border: 10px solid #fff;  
+                position: fixed;    
+                top: 100px;       
+            }
+            #contents{
+                width: 100%;
+                height: 1000vh;
+                background-color: yellowgreen;
+                margin-top: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>스크롤 백분율 구하기</h1>
+        <div id="scroll-bar"></div>
+        <div id="contents">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ex soluta id numquam ducimus, facilis, perferendis quis tempora voluptas autem ipsum sit dolorem vitae delectus voluptatibus, vero totam impedit ullam.</p>
+        </div>
+        <script src="./scroll_width.js"></script>
+    </body>
+</html>

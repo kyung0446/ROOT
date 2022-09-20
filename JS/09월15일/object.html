@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>생성자 함수</title>
+        <style>
+            .card{
+                width: 100px;
+                height: 150px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function Card(num,color) {
+                this.num = num;
+                this.color = color;
+                // this.init();
+            }
+            Card.prototype = {
+                constructor : Card,
+                init : function() {
+                    const divElem = document.createElement('div');
+                    divElem.style.color = this.color;
+                    divElem.textContent = this.num;
+                    divElem.classList.add('card');
+                    document.body.appendChild(divElem);
+                }
+            }
+            const card1 = new Card(1,'red');
+            card1.init();
+            console.log( card1 );
+            const card2 = new Card(2,'blue');
+            card2.init();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>스크롤 예제</title>
+        <style>
+            body{
+                height: 1000px;
+                background-color: yellowgreen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #fixed{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #222;
+                color: #fff;
+            }
+            #box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: 1s;
+            }
+            #box.zoomin{
+                transform: scale(2);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fixed">0</div>
+        <div id="box"></div>
+        <script src="./scroll-1.js"></script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="../reset.css" />        
+        <title>스크롤 다운 효과</title>
+        <style>
+            nav{
+                background-color: #444;
+                position: fixed;
+                width: 100%;
+                transition: top 0.5s;
+            }
+            nav > a{
+                display: inline-block;
+                padding: 20px;
+                font-size: 18px;
+            }
+            nav > a:nth-child(1){
+                background-color: green;
+            }
+            main{
+                height: 200vh;
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </nav>
+        <main>
+            <h2>Scroll Effect</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, pariatur labore repudiandae necessitatibus ipsam, eligendi, cupiditate placeat voluptate unde fugiat odit corrupti inventore ipsa doloribus eius delectus id explicabo earum.</p>
+        </main>
+        <script src="./scroll-slide.js"></script>
+    </body>
+</html>
