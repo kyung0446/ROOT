@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="../reset.css" />
+        <title>SCROLL SPY</title>
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            body{
+                overflow-x: hidden;
+            }
+            section{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 7rem;
+            }
+            #sec-1{ background-color: orange;}
+            #sec-2{ background-color: yellowgreen;}
+            #sec-3{ background-color: blue;}
+            #sec-4{ background-color: pink;}
+            /** menubar style **/
+            nav{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 50px;
+                background-color: rgba(255,255,255,0.6);                
+            }
+            nav{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            nav > a{
+                display: block;
+                padding: 10px 30px;
+            }
+            nav > a.active{
+                font-weight: bolder;
+                color: white;
+                background-color: rgba(0,0,0,0.6);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#sec-1" class="active">MENU-1</a>
+            <a href="#sec-2">MENU-2</a>
+            <a href="#sec-3">MENU-3</a>
+            <a href="#sec-4">MENU-4</a>
+        </nav>
+        <section id="sec-1">Section-1</section>
+        <section id="sec-2">Section-2</section>
+        <section id="sec-3">Section-3</section>
+        <section id="sec-4">Section-4</section>
+        <script src="./scroll_spy.js"></script>
+    </body>
+</html>
