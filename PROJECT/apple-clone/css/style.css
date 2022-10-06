@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body{
+    letter-spacing: -0.05rem;
+}
+/***** nav *****/
+.global-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    padding: 1rem;
+}
+.local-nav{
+    position: absolute;
+    top: 46px;
+    left: 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    padding: 1rem;
+}
+.local-nav.local-nav-fixed{
+    position: fixed;
+    top: 0;
+    background-color: rgba(255,255,255,0.2);
+}
+.global-nav-link,
+.local-nav-link{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+.global-nav-link{
+    justify-content: space-between;
+}
+.local-nav-link > a.local-name{
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+.local-nav-link > a:not(.local-name){
+    margin-left: 2rem;
+    font-size: 0.8rem;
+}
+/***** common class *****/
+.main-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    height: 4rem;
+}
+/***** section *****/
+section{
+    border: 1px solid red;
+}
+#scroll-section-0{
+    position: relative;
+}
