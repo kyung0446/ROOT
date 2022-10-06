@@ -1,4 +1,3 @@
-
 const setCurrentScene = () => {
     yOffset = window.pageYOffset;
     let total = 0;
@@ -19,12 +18,16 @@ const setSecHeight = () => {
         sceneInfo[i].objs.container.style.height = sceneInfo[i].scrollHeight + 'px';
     }
     setCurrentScene();
-    console.log( currentScene );
 }
 const init = () => {
     //각각의 섹션의 height 설정
     setSecHeight();
     //초기화
-    window.addEventListener('scroll',handlerScroll);
+    window.addEventListener('scroll',()=>{
+        //스크롤이 발생될 때 현재 보여지는 section 값을 가져오도록 함.
+        handlerScroll();
+    });
 }
+
 window.addEventListener('load',init);
+window.addEventListener('resize',setSecHeight);

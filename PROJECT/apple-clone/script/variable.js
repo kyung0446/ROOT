@@ -7,10 +7,11 @@ const sceneInfo = [
         scrollHeight : 0,  
         objs : {
             container : document.querySelector('#scroll-section-0'),
-        }  
+        },
+
     },
     {//section-1
-        heightCnt : 3,
+        heightCnt : 2,
         scrollHeight : 0,
         objs : {
             container : document.querySelector('#scroll-section-1'),
