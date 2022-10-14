@@ -142,7 +142,7 @@ footer{
 }
 .canvas-desc{
     max-width: 1000px;
-    margin: auto;
+    margin: -20rem 0 auto;
     padding: 0 1rem;
     font-size: 1.2rem;
     color: #888;
