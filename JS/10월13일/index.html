@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../reset.css" rel="stylesheet" type="text/css" />
+    <link href="./theme.css" rel="stylesheet" type="text/css" />
+    <title>모멘텀</title>
+    <style>
+      body{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .hidden {
+        display: none;
+      }
+      .bg_desc{
+        position: fixed;
+        left: 0;
+        bottom: 2rem;
+        padding-left: 1rem;
+        height: 2rem;
+        line-height: 2rem;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="icon">
+    <button class="theme">Toggle Theme</button>
+    <p class="loginName hidden">Hello</p>
+    <form id="loginForm">
+      <input type="text" placeholder="로그인 이름 입력" required />
+      <button>Log-In</button>
+    </form>
+    <h1 class="clock">00:00:00</h1>
+    <div class="quote">
+      <button>다음</button>
+      <span>명언</span>
+      <span>작가</span>
+    </div>
+    <form id="todoForm">
+      <input type="text" placeholder="할일을 입력하세요" required />
+    </form>
+    <ul class="todoList"></ul>
+    <p class="bg_desc"></p>
+    <script src="./js/theme.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/todoList.js"></script>
+    <!-- <script src="./js/fetch.js"></script> -->
+    <script src="./js/weather.js"></script>
+    <script src="./js/background.js"></script>
+  </body>
+</html>

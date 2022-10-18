@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <section>
+        <h1>Contact</h1>
+        <form class="gform" method="POST" data-email="kyung0446@gmail.com" action="https://script.google.com/macros/s/AKfycbzdAxJs2aJG7gRIjIX8p1Z_vYiWqWUf1JxVHm_XWIObZL4vyW0-TRwHmp4bd-teczo0pg/exec">
+            <fieldset>
+                <div class="box-input">
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" name="name" placeholder="이름입력">
+                </div>
+                <div class="box-input">
+                    <label for="userEmail">Email-Address</label>
+                    <input type="email" id="userEmail" name="email" placeholder="이메일 입력">
+                </div>
+                <div class="box-input">
+                    <label for="userMessage">Message</label>
+                    <textarea name="message" id="userMessage"></textarea>
+                </div>  
+                <div class="box-input">
+                    <button type="submit" class="btn-send">Send Message</button>
+                </div>   
+            </fieldset>
+            <div style="display:none" class="thankyou_message">
+                <p>메일이 성공적으로 보내졌습니다. 빠른 시일 내에 답변 드리겠습니다</p>
+            </div>
+        </form>
+    </section>
+    <iframe src="https://calendar.google.com/calendar/embed?src=c3a17dfef2af883cd5fde7487dbae5851d159f935e40ed9e9b2f3a8bb3c3edea%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <script data-cfasync="false" src="./form-submission-handler.js"></script>
+  </body>
+</html>
