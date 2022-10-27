@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 mp4 재생</title>
+    <link rel="stylesheet" type="text/css" href="../reset.css" />
+    <style>
+        body{
+            height: 500vh;
+        }
+        .sample{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video class='sample' src="../images/Green.mp4" muted controls></video>
+    <script>
+        const tagVideo = document.querySelector('.sample');
+        const handlerScroll = () => {   
+            let progress = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+            console.log( progress );
+            tagVideo.currentTime = tagVideo.duration * progress;
+        }
+        const init = () => {
+            console.log( '비디오 로드 완료' );
+            window.addEventListener('scroll',handlerScroll);
+        }
+        // window.addEventListener('load',init);
+        tagVideo.addEventListener('loadeddata',init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 스크롤 재생</title>
+    <link rel="stylesheet" type="text/css" href="../reset.css" />
+    <style>
+        body{
+            height: 500vh;
+        }
+        .sample{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img class="sample" src="../images/seq_red/Green_(1).jpg" alt="image scroll-1">
+    <script>
+        const MAX = 150;
+        const videoImages = [];
+        const tagImg = document.querySelector('img');
+        const loadImages = () => {
+            for( let i=1 ; i<=MAX ; i++ ){
+                let imgElem = new Image();
+                imgElem.src = `../images/seq_red/Green_(${i}).jpg`;
+                videoImages.push(imgElem);
+            }
+        }
+        const handlerScroll = () => {
+            const progress = window.pageYOffset / (document.body.offsetHeight-window.innerHeight);
+            window.requestAnimationFrame(()=>{
+                let currentFrame = Math.floor(progress * (MAX-1));
+                tagImg.src = videoImages[currentFrame].src;
+            });
+        }
+        const init = () => {
+            loadImages();
+            window.addEventListener('scroll',handlerScroll);
+        }
+        window.addEventListener('load',init);
+    </script>
+</body>
+</html>

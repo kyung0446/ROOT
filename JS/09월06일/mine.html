@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>지뢰찾기</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #wrapper {
+                margin: 30px auto;
+            }
+            .mine {
+                display: grid;
+                grid-template-columns: repeat(5, 30px);
+                grid-template-rows: repeat(5, 30px);
+                justify-content: center;
+            }
+            .mine > div {
+                border: 2px solid #666;
+                border-top-color: #f6f6f6;
+                border-left-color: #f6f6f6;
+                box-sizing: border-box;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            .mine > div.show {
+                border-color: transparent;
+                border-right: 2px dotted #333;
+                border-bottom: 2px dotted #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="mine"></div>
+        </div>
+        <script src="./mine.js"></script>
+    </body>
+</html>

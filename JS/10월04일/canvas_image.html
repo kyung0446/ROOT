@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../reset.css" />
+    <title>캔버스를 이용한 이미지 스크롤링</title>
+    <style>
+        body{
+            height: 500vh;
+        }
+        .sample{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="sample" width="1920" height="1080"></canvas>
+    <script>
+        const tagCanvas = document.querySelector('.sample');
+        const context = tagCanvas.getContext('2d');
+        const MAX = 117;
+        const videoImages = [];
+
+        const loadImages = () => {
+            for( let i=0 ; i<MAX ; i++ ){
+                let imgElem = new Image();
+                imgElem.src = `../images/seq_com/${i}.jpg`;
+                videoImages.push(imgElem);
+            } 
+            videoImages[0].onload = () =>{
+                context.drawImage(videoImages[0],0,0);
+            }
+        }
+        const drawFrame = () => {
+            const progress = window.pageYOffset / (document.body.offsetHeight-window.innerHeight);
+            let currentFrame = Math.floor(progress * (MAX-1));
+            context.drawImage(videoImages[currentFrame],0,0);
+            window.requestAnimationFrame(drawFrame);
+        }
+        const init = () => {
+            loadImages(); 
+            drawFrame();
+        }
+        window.addEventListener('load',init);
+    </script>
+</body>
+</html>

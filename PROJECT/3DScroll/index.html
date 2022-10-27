@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <title>3D SCROLL</title>
+    </head>
+    <body>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+        <main id="wrapper">
+            <nav>
+                <a href="0" class="active">MENU-1</a>
+                <a href="1">MENU-2</a>
+                <a href="2">MENU-3</a>
+                <a href="3">MENU-4</a>
+            </nav>
+            <div class="stage">
+                <div class="box">
+                    <section class="box-left"></section>
+                    <section class="box-right"></section>
+                    <section id="sec1" class="front front-a">
+                        <div class="front-content">Section-1</div>
+                    </section>
+                    <section id="sec1" class="front front-b">
+                        <div class="front-content">Section-2</div>
+                    </section>
+                    <section id="sec1" class="front front-c">
+                        <div class="front-content">Section-3</div>
+                    </section>
+                    <section id="sec1" class="front front-d">
+                        <div class="front-content">Section-4</div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한페이지씩 스크롤 이동</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+        }
+    </style>
+  </head>
+  <body>
+    <section style="background-color: orange;">Section-1</section>
+    <section style="background-color: greenyellow;">Section-2</section>
+    <section style="background-color: skyblue;">Section-3</section>
+    <section style="background-color: pink;">Section-4</section>
+    <script>        
+        const MAX_PAGE = document.body.querySelectorAll('section').length;
+        let pageCount = 0;
+        let scrollHeight = 0;
+        
+        const handlerWheel = (event) => {
+            event.preventDefault();
+            // console.log( event.deltaY );
+            if( event.deltaY < 0 ) {
+                //휠 위로 
+                if( pageCount <= 0 ) return;
+                pageCount--;
+
+            }
+            if( event.deltaY > 0 ) {
+                //휠 아래로 
+                if( pageCount >= MAX_PAGE-1 ) return;
+                pageCount++;
+            }
+            scrollHeight = pageCount * window.innerHeight;
+            window.scrollTo({left:0, top:scrollHeight, behavior:"smooth"});
+        }
+        window.addEventListener('wheel',handlerWheel,{passive:false});
+    </script>
+  </body>
+</html>

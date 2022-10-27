@@ -25,14 +25,14 @@
     1~10까지의 숫자중에서 소수를 출력하세요.
 */
 let count = 0;
-for( let i=0 ; i<=10 ; i++ ){
+for( let i=2 ; i<=10 ; i++ ){
     count=0;
-    for( let j=0 ; j<=10 ; j++ ){
+    for( let j=2 ; j<=10 ; j++ ){
         if( i % j === 0 ){
             count++;
         }
     }
-    if( count === 2 ){
+    if( count === 1 ){
         console.log( i );
     }
 }

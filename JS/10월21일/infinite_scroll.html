@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무한 스크롤 구현</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul > li{
+            list-style: none;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            padding: 100px 0;
+        }
+        li:nth-child(2n){
+            background-color: plum;
+        }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        /*
+        const tagUl = document.querySelector('ul');
+        let liCount = tagUl.children.length;
+        let elemLi;
+        const handlerScroll = () => {
+            if( window.innerHeight+window.pageYOffset >= document.body.offsetHeight ) {
+                //li를 하나 더 추가
+                elemLi = document.createElement('li');
+                elemLi.textContent = ++liCount;
+                tagUl.appendChild(elemLi);
+            }
+        }
+        window.addEventListener('scroll',handlerScroll);
+        */
+        const tagUl = document.querySelector('ul');
+        let liCount = tagUl.children.length;
+        let elemLi=tagUl.querySelector('li:last-child');
+        //1 인터섹션 옵저버를 생성
+        const io = new IntersectionObserver( (entry)=>{
+            //현재 보여지는 target
+            // const target = entry[0].target;
+            if( entry[0].isIntersecting ) {
+                //target이 화면에 보이면
+                //감사 대상을 취소
+                io.unobserve(elemLi);
+                // 새로운 li를 추가
+                elemLi = document.createElement('li');
+                elemLi.textContent = ++liCount;
+                tagUl.appendChild(elemLi);
+                //감시 대상을 등록
+                io.observe(elemLi);
+            }
+        },{
+            //li가 반정도 보였을 때 
+            threshold: 0.5
+        });
+        io.observe(elemLi);
+    </script>
+  </body>
+</html>

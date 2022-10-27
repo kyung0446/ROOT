@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>지뢰찾기</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #wrapper{
+                margin: 30px auto;
+            }
+            .mine{
+                display: grid;
+                grid-template-columns: repeat(10,30px);
+                grid-template-rows: repeat(10,30px);
+                justify-content: center;
+            }
+            .mine > div{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="mine">
+            </div>
+        </div>
+        <script src="./mine.js"></script>
+    </body>
+</html>

@@ -1,10 +1,12 @@
-html, body, h1, h2, h3, h4, h5, h6, p, blockquote, code, img, dl, dt, dd, ol, ul, li, fieldset, legend, caption { margin: 0; padding: 0; border: 0; }
-div, span, article, section, header, footer, p, ul, li, fieldset, legend, label, a, nav { box-sizing: border-box; }
+@charset 'utf-8';
+
 html {
-    height: 100%;
+	font-family: 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
+	line-height: 1.2;
+	word-wrap: break-word;
 }
 body {
-    min-height: 100%;
+	-webkit-font-smoothing: antialiased;
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,19 +25,26 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-ol,
-ul {
+div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
+	box-sizing: border-box;
+}
+ol, ul, li {
 	list-style: none;
 }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a{
-	text-decoration: none;
-	color: inherit;
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
 }

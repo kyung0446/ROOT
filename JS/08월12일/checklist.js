@@ -22,7 +22,7 @@
         for( let i=0 ; i<itemList.length ; i++ ){
             strTag += `<li id=${i} class=close>`;
             strTag += itemList[i];
-            strTag += '<span>X</span>'
+            strTag += '<span>X</span>';
             strTag += '</li>';
         }
         tagUl.innerHTML = strTag;

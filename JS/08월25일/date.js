@@ -23,7 +23,7 @@ const printDayString = (days) => {
     let strDay = day ? day+'일' : '';
     return strYear + strDay;
 }
-const createDay2Date = (days) => {    
+const createDay2Date = (days) => {
     let objP1 = document.createElement('p');
     //objP1.textContent = days+'일';
     objP1.textContent = printDayString(days);
